@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class EnemyChecker : Node
 {
-    private static int _enemySearchRange = 1 >> 6;
+    private static int _enemySearchRange = 1 << 6;
     private Transform _transform;
 
     public EnemyChecker(Transform transform)
@@ -25,6 +25,8 @@ public class EnemyChecker : Node
             {
                 //少なくとも一つのコライダーを見つけたら、ターゲットスロットに格納する。
                 parent.parent.SetData("Enemy" , collider[0].transform);
+                state = NodeState.SUCCESS;
+                return state;
             }
             state = NodeState.FAILUED;
             return state;
