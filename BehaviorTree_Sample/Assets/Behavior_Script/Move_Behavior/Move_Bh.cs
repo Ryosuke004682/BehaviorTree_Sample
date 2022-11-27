@@ -1,10 +1,11 @@
+using BehaviorTree;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Move_Bh : BehaviorTree_enum
+public class Move_Bh : Node
 {
-    BehaviorTree_enum tree_Enum;
+    Node tree_Enum;
 
     public GameObject target;
     public float _trackingSpeed;
