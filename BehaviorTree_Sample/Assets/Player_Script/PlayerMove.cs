@@ -41,7 +41,6 @@ public class PlayerMove : MonoBehaviour
         else
         {
             _rb.drag = 0;
-            _speed = 0;
         }
         Move();
     }
@@ -51,7 +50,7 @@ public class PlayerMove : MonoBehaviour
         _horizontal = Input.GetAxisRaw("Horizontal");
         _vertical = Input.GetAxisRaw("Vertical");
 
-        var verocity = new Vector3(_horizontal, 0, _vertical) * _speed;
+        var verocity = new Vector3(_horizontal, 0, _vertical);
 
         if (verocity.magnitude >= 0)
         {
