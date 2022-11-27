@@ -10,7 +10,6 @@ namespace BehaviorTree
         private Transform _transform;
         private Transform[] _wayPoints;
         private int _currentWayPointIndex = 0;
-        private float _speed = 2.0f;
 
         private float _waitTime  = 1.0f;
         private float _waitCount = 0.0f;
