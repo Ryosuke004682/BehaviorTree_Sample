@@ -7,11 +7,17 @@ public class EnemysBT : Tree
 
     public static float speed = 4;
     public static float forRange = 6.0f;
+    public static float attackRange = 1.0f;
 
     protected override Node SetUpTree()
     {
         Node root = new Selector(new List<Node>
         {
+            new Sequence(new List<Node>
+            {
+                new EnemyAttackRange(transform),
+                new TaskAttack(transform)
+            }),
             new Sequence(new List<Node>
             {
                 new EnemyChecker(transform),

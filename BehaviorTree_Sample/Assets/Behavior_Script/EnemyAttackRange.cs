@@ -5,7 +5,7 @@ using BehaviorTree;
 
 public class EnemyAttackRange : Node
 {
-    private static int _enemyLayer = 1 >> 6;
+       
         private Transform _transform;
         
         public EnemyAttackRange(Transform transform)
@@ -24,7 +24,7 @@ public class EnemyAttackRange : Node
         }
 
         Transform target = (Transform)enemy;
-        if(Vector3.Distance(_transform.position , target.position) <= EnemysBT.forRange)
+        if(Vector3.Distance(_transform.position , target.position) <= EnemysBT.attackRange)
         {
             state = NodeState.SUCCESS;
             return state;
