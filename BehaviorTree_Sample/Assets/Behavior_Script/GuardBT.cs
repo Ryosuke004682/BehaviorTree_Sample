@@ -1,11 +1,12 @@
 using BehaviorTree;
 using Unity.VisualScripting;
 
-public class GuardBT : Tree
+public class EnemysBT : Tree
 {
     public UnityEngine.Transform[] waypoint;
 
-    public static float speed = 2;
+    public static float speed = 4;
+    public static float forRange = 6.0f;
 
     protected override Node SetUpTree()
     {

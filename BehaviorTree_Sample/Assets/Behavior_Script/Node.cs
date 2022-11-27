@@ -70,7 +70,7 @@ namespace BehaviorTree
                 
                 if(value != null)
                 {
-                    return value;    
+                    return value;
                 }
 
                 node = node.parent;
